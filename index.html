@@ -1,0 +1,61 @@
+<html>
+<style>
+    #drop_zone {
+        border: 2px dashed #bbb;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        padding: 25px;
+        text-align: center;
+        font: 20pt bold 'Vollkorn';
+        color: #bbb;
+    }
+
+    #buildfailed {
+        display: none;
+    }
+
+    div.code {
+        width:100%;
+        background:#ccc;
+        padding:10px;
+    }
+
+    #fulllog {
+        display:none;
+        width:100%;
+        height:300px;
+        overflow: auto;
+    }
+</style>
+<script src="errors.js"></script>
+<script src="app.js"></script>
+
+<body>
+    <h3>Select your build log</h3>
+    <input type="file" id="files" name="files" />
+    <div id="drop_zone">Drop files here</div>
+    <br>
+
+    <hr>
+    <div id="buildfailed">
+        <h1>Build Failed</h1>
+
+        <h3>Command Faild</h3>
+        <div class="code" id="command"></div>
+        <br><br>
+         <h2>Tips</h2>
+        <div class="code" id="tips"></div>
+        <br><br>
+        <h3>Build Failured Message</h3>
+        <div class="code" id="message"></div>
+
+        <br><br>
+
+        <h2>Full Log <a href="#" id="showfull">Toggle</a></h2>
+        <div class="code" id="fulllog"></div>
+    </div>
+
+</body>
+
+</html>
